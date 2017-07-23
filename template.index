@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-content/head.html
+include/head.html
 <body class="row">
-content/header.html
+include/header.html
 
 <section class="row">
 Popular Posts
-content/posts/test_post.html
+include/posts/test_post.html
 </section>
 
 <section class="row">
 Recent Posts
-content/posts/test_post.html
+include/posts/test_post.html
 </section>
 
 <footer class="row">
-content/footer/license.html
+include/footer/license.html
 </footer>
 
 </body>

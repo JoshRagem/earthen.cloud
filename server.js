@@ -6,10 +6,14 @@ var http = require("http"),
 
 function scb(req, res) {
   if (/css/.test(req.url)) {
-    new fs.ReadStream("./css/min.css").pipe(res);
+    new fs.ReadStream("./objects/css/min.css").pipe(res);
   } else {
-    exec("./build.sh ordering index.html", function() {
-      new fs.ReadStream("./index.html").pipe(res);
+    exec("make", function() {
+      if (/index/.test(req.url)) {
+        new fs.ReadStream("./objects/index.html").pipe(res);
+      } else {
+        new fs.ReadStream("./objects/error.html").pipe(res);
+      }
     });
   }
 }

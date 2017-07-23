@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+include/head.html
+<body class="row">
+include/header_err.html
+
+<section class="row">
+Please don't do that
+</section>
+
+<footer class="row">
+include/footer/license.html
+</footer>
+
+</body>
+</html>

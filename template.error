@@ -4,13 +4,9 @@ include/head.html
 <body class="row">
 include/header_err.html
 
-<section class="row">
-Please don't do that
-</section>
+include/msg_err.html
 
-<footer class="row">
-include/footer/license.html
-</footer>
+include/footer.html
 
 </body>
 </html>

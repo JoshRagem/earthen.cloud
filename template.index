@@ -4,19 +4,9 @@ include/head.html
 <body class="row">
 include/header.html
 
-<section class="row">
-Popular Posts
-include/posts/test_post.html
-</section>
+include/article.html
 
-<section class="row">
-Recent Posts
-include/posts/test_post.html
-</section>
-
-<footer class="row">
-include/footer/license.html
-</footer>
+include/footer.html
 
 </body>
 </html>

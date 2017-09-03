@@ -18,6 +18,6 @@ you already have these, I'm sure
 
 files are rendered into `objects/index.html` and `objects/error.html`
 
-`node server.js` will serve the html at `0.0.0.0:8080`, to experience the site with css, place [min.css](http://mincss.com/download.html) at `objects/css/min.css`
+`node server.js` will serve the html at `0.0.0.0:8088`, to experience the site with css, place [min.css](http://mincss.com/download.html) at `objects/css/min.css`
 
 each page refresh will build the html files

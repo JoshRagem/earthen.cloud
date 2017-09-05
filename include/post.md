@@ -1,29 +1,23 @@
-### Helping People on the Kubernetes Slack Group
+# Git Flow Alternative
 
-_July 30, 2017_
+_Sep 05, 2017_
 
-I've been lurking in the k8s slack group for a few months now watching people come and go with questions and answers. I now feel ready, as a non-expert willing to reply to questions with unhelpful text to provide a small orientation to people who are just joining the slack group.
+I recently watched a team switch to git flow from a custom git branching model; I watched as that team accepted with blind faith that git flow would solve their problems. I can say with certainty that none of their problems have been resolved by the change.
 
-### I would like now to present:
+## Why isn't it working?
 
-# K8s FAQ
+### The point of git flow
 
-Here are simplified versions of the most common questions I have seen while lurking on slack
+(* [source](https://datasift.github.io/gitflow/IntroducingGitFlow.html))
 
-1. How to install on bare metal?
-2. How to do HA master cluster?
-3. What does _this_ mean??!?!?!?!?
+1. Parallel Development
+2. Release Staging Area
+3. Support For Emergency Fixes
 
-Now here are some answers I have prepared:
+These seem like desirable features in a source control management system. Git flow can provide these features, but it is important to understand the classic git flow is not the only way to achieve these things--there are theoretically infinite ways to have what you want out of git--that's part of the problem:
 
-1. There are a few ways to install on bare metal, but no **ONE TRUE WAY**; if you proceed, you will have problems no one else will understand. If you are lucky, one of the ready-made solutions will fit your needs. Try: [kubespray](https://github.com/kubernetes-incubator/kubespray) or [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/). I got most of the way on a local cluster but I never got dns to work correctly.
-2. No one seems to know. I haven't seen anyone answer this question except to say that kubeadm will do HA master when it grows up. Maybe it's just easy if you use one of the k8s cluster building tools for cloud providers.
-3. It means you did something wrong. K8s is a slippery beast and you will have a hard time pinning a bug to it. Nearly all errors are a misconfiguration or an attempt to use a feature that does not exist. Also you might have to re-do your CNI system to make it work. Try that a few times.
+## Git is Too Complicated!
 
----
+There are only a few objects in git, and you can slice and dice them a million different ways to get what you want. This seems to lead to a situation where there are too many choices; without adequate understanding it is impossible to choose and a developer must go with whatever suggestion seems reasonable.
 
-I joined the k8s slack group because I was hoping to get some help with a difficult (to me) dns situation. It's been a few months now and I've been hanging out in the `#kubernetes-users` channel watching what people post. I enjoy lurking and watching because I get to see a remarkable variety of people with a remarkable variety of situations. Most of the traffic in `#kubernetes-users` is people asking for help--I believe the purpose of this channel is a "quick question" platform.
-
-My observation is that a great many questions go un-responded due to bursts of questions coming in--probably caused by people arriving to work in their respective time zones. Since the people who are most qualified to respond to questions are probably at work and don't have time to read every single post, some get missed. This is what happened to my first question about dns.
-
-I have occasionally popped up now and again to respond to some questions. My answers are usually something like "you have a typo in your yaml" or "dns broke for me too!". I'm certainly not the most expert at k8s, so I keep my mouth shut instead of replying "have you tried googling it?".
+I think the situation is very unfortunate because it came about due to the _simplicity_ of git. There are just a few objects inside the git system itself and they are just labeled and treated in different ways to accomplish a task.
